@@ -64,6 +64,48 @@ moment.format();
 ```
 
 ```sh
+moment().zone()
+moment().utcOffset()
+moment().zone(420)
+moment().utcOffset(-420)
+
+moment('2016-01-01').max('2016-02-01').format()
+moment.min(moment('2016-01-01'), moment('2016-02-01')).format()
+
+moment().min('2016-02-01').format()
+moment().max(moment('2016-01-01'), moment('2016-02-01').format())
+
+moment().add(period, number) is deprecated. Please use moment().add(number, period)
+moment().subtract(period, number) is deprecated. Please use moment().subtract(number, period)
+moment().add('hours', 3);
+moment().add(3, 'hours');
+
+moment().min is deprecated, use moment.max
+moment().max is deprecated, use moment.min
+
+moment('01/12/2016', 'YYYY-MM-DD', true).format()
+moment('01/12/2016', 'YYYY-MM-DD').format()
+
+moment('12 March, 2016', ['DDMMMMY', 'MMMMDDY']).format()
+moment('March 12, 2016', ['DDMMMMY', 'MMMMDDY']).format()
+
+var a = moment('2016-01-01');
+var b = a.add(1, 'week');
+a.format();
+
+var a = moment('2016-01-01');
+var b = a.clone().add(1, 'week');
+a.format();
+
+moment('2016-03-12 13:00:00').add(1, 'day').format('LLL')
+moment('2016-03-12 13:00:00').add(24, 'hours').format('LLL')
+
+moment('2016-01-01').add(1, 'year').format('LL')
+moment('2016-01-01').add(365, 'day').format('LL')
+```
+
+
+```sh
 npm install moment --save
 yarn add moment
 Install-Package Moment.js
