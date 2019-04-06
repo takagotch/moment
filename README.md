@@ -85,3 +85,14 @@ npm install moment
   moment().format();
 </script>
 ```
+
+```py
+import moment
+from datetime import datetime
+
+moment.date("12-18-2012")
+
+moment.date("12-18-2012", "%m-%d-%Y")
+moment.date("2012-12-18")
+```
+
